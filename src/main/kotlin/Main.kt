@@ -10,6 +10,8 @@ class CdklCommand : CliktCommand() {
   override fun run() {
     val parser = Parser(file)
     parser.validateDimacsFormat()
+    val problem = parser.parseProblem()
+    println(problem)
   }
 }
 

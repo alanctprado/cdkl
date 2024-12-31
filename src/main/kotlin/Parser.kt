@@ -3,6 +3,7 @@ package com.alanprado
 import com.github.ajalt.clikt.core.InvalidFileFormat
 import java.io.File
 import kotlin.math.absoluteValue
+import com.alanprado.Polarity.*
 
 class Parser(private val filePath: String) {
   private val file = File(filePath)
@@ -21,6 +22,12 @@ class Parser(private val filePath: String) {
 
     val clauses = lines.filterNot { it.startsWith("c ") || it.startsWith("p ") }
     validateClauses(clauses, expectedVariables, expectedClauses)
+  }
+
+  fun parseProblem() : Problem {
+    val rawClauses = file.readLines().map { it.trim() }.filter { it.isNotBlank() }.filterNot { it.startsWith("c ") || it.startsWith("p ") }
+    val dimacsClauses = rawClauses.map { cl -> cl.split(Regex("""\s+""")).map { va -> va.toInt() }.dropLast(1) }
+    return Problem(dimacsClauses.map { cl -> Clause(cl.map { va -> Variable(va.absoluteValue, if (va > 0) Positive else Negative) }) })
   }
 
   private fun throwFormattingError(details: String) {
