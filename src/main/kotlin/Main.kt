@@ -12,6 +12,8 @@ class CdklCommand : CliktCommand() {
     parser.validateDimacsFormat()
     val problem = parser.parseProblem()
     println(problem)
+    val dpll = DPLL(problem)
+    dpll.solve()
   }
 }
 
