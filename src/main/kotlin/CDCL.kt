@@ -3,7 +3,7 @@ package com.alanprado
 import com.alanprado.SolverState.*
 import com.alanprado.Value.*
 
-class DPLL(private val clauses: Problem) {
+class CDCL(private val clauses: Problem) {
   private val model: MutableMap<Variable, Value> =
       clauses.getVariables.associateWith { True }.toMutableMap()
 
