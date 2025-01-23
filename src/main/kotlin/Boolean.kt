@@ -17,27 +17,35 @@ fun Literal.opposite(): Literal =
   if (polarity == Positive) Literal(variable, Negative)
   else Literal(variable, Positive)
 
-class Clause(private val literals: List<Literal>) {
+class Clause(val literals: List<Literal>) {
   override fun toString(): String = literals.joinToString("; ")
   val isEmpty: Boolean = literals.isEmpty()
   val isUnit: Boolean = literals.size == 1
   val getLiteral: Literal? = literals.firstOrNull()
   fun contains(literal: Literal) = literals.contains(literal)
   fun remove(literal: Literal) = Clause(literals.filterNot { it == literal })
-  val getVariables: List<Variable> = literals.map { it.variable }
+  val variables: List<Variable> = literals.map { it.variable }
+  val size = literals.size
 }
 
-class Problem(private val clauses: List<Clause>) {
+class Formula(val clauses: List<Clause>) {
   override fun toString(): String = clauses.joinToString("\n")
   val isEmpty: Boolean = clauses.isEmpty()
   val hasEmptyClause: Boolean = clauses.any { it.isEmpty }
   val unitClause: Clause? = clauses.find { it.isUnit }
   val getLiteral: Literal? = clauses.firstOrNull()?.getLiteral
-  val getVariables: List<Variable> =
-      clauses.flatMap { it.getVariables }.toSet().toList()
+  val variables: List<Variable> =
+      clauses.flatMap { it.variables }.toSet().toList()
+  val totalVariables: Int
 
-  fun removeSatisfiedClauses(literal: Literal): Problem =
-      Problem(clauses.filterNot { it.contains(literal) })
-  fun removeOppositeLiterals(literal: Literal): Problem =
-      Problem(clauses.map { it.remove(literal.opposite()) })
+  init {
+    totalVariables = variables.size
+  }
+
+  fun removeSatisfiedClauses(literal: Literal): Formula =
+      Formula(clauses.filterNot { it.contains(literal) })
+  fun removeOppositeLiterals(literal: Literal): Formula =
+      Formula(clauses.map { it.remove(literal.opposite()) })
+  fun addClause(clause: Clause): Formula =
+      Formula(clauses + clause)
 }

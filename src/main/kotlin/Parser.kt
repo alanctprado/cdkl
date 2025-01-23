@@ -28,7 +28,7 @@ class Parser(private val filePath: String) {
     validateClauses(clauses, expectedVariables, expectedClauses)
   }
 
-  fun parseProblem() : Problem {
+  fun parseProblem() : Formula {
     val rawClauses = file.readLines()
       .map { it.trim() }
       .filter { it.isNotBlank() }
@@ -36,7 +36,7 @@ class Parser(private val filePath: String) {
     val dimacsClauses = rawClauses
       .map { cl -> cl.split(Regex("""\s+"""))
         .map { va -> va.toInt() }.dropLast(1) }
-    return Problem(dimacsClauses
+    return Formula(dimacsClauses
       .map { cl -> Clause(cl
         .map {va -> Literal(Variable(va.absoluteValue), if (va > 0) Positive else Negative) }) })
   }
