@@ -15,7 +15,7 @@ class CdklCommand : CliktCommand() {
     val cdcl = CDCL(problem)
     val result = cdcl.solve()
     println(result)
-    if (result == SolverState.Satisfiable) println(cdcl.getModel())
+    if (result == SolverResult.Satisfiable) println(cdcl.getModel())
   }
 }
 

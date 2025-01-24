@@ -2,15 +2,18 @@ package com.alanprado
 
 import com.alanprado.Polarity.*
 
-enum class SolverState { Satisfiable, Unsatisfiable }
+enum class SolverResult { Satisfiable, Unsatisfiable }
 enum class Polarity { Positive, Negative }
 enum class Value { True, False, Unknown }
 
-data class Variable(val index: Int)
+data class Variable(val index: Int) {
+  override fun toString(): String = "x$index"
+}
 
 data class Literal(val variable: Variable, val polarity: Polarity) {
   val isPositive = polarity == Positive
   val isNegative = polarity == Negative
+  override fun toString() = "${if (polarity == Positive) "" else "~"}$variable"
 }
 
 fun Literal.opposite(): Literal =
@@ -18,7 +21,7 @@ fun Literal.opposite(): Literal =
   else Literal(variable, Positive)
 
 class Clause(val literals: List<Literal>) {
-  override fun toString(): String = literals.joinToString("; ")
+  override fun toString(): String = "(${literals.joinToString(" ")})"
   val isEmpty: Boolean = literals.isEmpty()
   val isUnit: Boolean = literals.size == 1
   val getLiteral: Literal? = literals.firstOrNull()
