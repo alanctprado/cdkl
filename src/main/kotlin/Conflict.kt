@@ -74,7 +74,9 @@ class ImplicationGraph(private val strategy: ConflictStrategy, private val safeM
   private fun ensureConflictIsValid(conflictClause: Clause) {
     if (conflictClause.literals.isEmpty()) throw IllegalArgumentException("Empty conflict clause")
     val isMissingOppositeLiteral =
-      conflictClause.literals.any { literal -> implicationGraph.keys.count { node -> node.literal == literal.opposite() } != 1 }
+      conflictClause.literals.any { literal ->
+        implicationGraph.keys.count { node -> node.literal == literal.opposite() } != 1
+      }
     if (isMissingOppositeLiteral) {
       throw IllegalArgumentException("Conflicting literals for clause $conflictClause were not found in the graph.")
     }
