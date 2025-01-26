@@ -40,6 +40,7 @@ class Formula(val clauses: List<Clause>) {
   val variables: List<Variable> =
       clauses.flatMap { it.variables }.toSet().toList()
   val totalVariables: Int
+  val size = clauses.size
 
   init {
     totalVariables = variables.size
