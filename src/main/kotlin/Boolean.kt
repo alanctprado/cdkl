@@ -39,11 +39,11 @@ class Formula(val clauses: List<Clause>) {
   val getLiteral: Literal? = clauses.firstOrNull()?.getLiteral
   val variables: List<Variable> =
       clauses.flatMap { it.variables }.toSet().toList()
-  val totalVariables: Int
+  val numVariables: Int
   val size = clauses.size
 
   init {
-    totalVariables = variables.size
+    numVariables = variables.size
   }
 
   fun removeSatisfiedClauses(literal: Literal): Formula =

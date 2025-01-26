@@ -1,63 +1,68 @@
 package com.alanprado
 
-class CDCL(private var formula: Formula) {
+import com.alanprado.SolverResult.*
+
+class CDCL(formula: Formula, private val safeMode: Boolean = true) {
   private var decisionLevel = 0
-  private val model = Model
-  private val implicationGraph = ImplicationGraph(ConflictStrategy.DECISIONS)
-  private val watcher = TwoLiteralWatcher(formula)
+  private val implicationGraph = ImplicationGraph(ConflictStrategy.DECISIONS, safeMode)
+  private val watcher = TwoLiteralWatcher(formula, safeMode)
+  private val decider = BasicDecider(formula)
+  private val numVariables = formula.numVariables
 
   fun solve(): SolverResult {
     unitPropagation()
-    do {
-      while (hasConflict()) {
-        if (decisionLevel == 0) return SolverResult.Unsatisfiable
-        val (learnedClause, level) = analyzeConflict()
-        backjump(learnedClause, level)
-        unitPropagation()
-      }
-      if (modelIsPartial()) {
-        decide()
-        unitPropagation()
-      }
-    } while (modelIsPartial() || hasConflict())
-    return SolverResult.Satisfiable
-  }
-
-  private fun analyzeConflict(): Pair<Clause, Int> {
-    assert(watcher.conflictClause() != null)
-    return implicationGraph.analyzeConflict(watcher.conflictClause()!!)
-  }
-
-  private fun backjump(learnedClause: Clause, level: Int) {
-    implicationGraph.backjump(level)
-    model.backjump(level)
-    watcher.backJump(level)
-    formula = formula.addClause(learnedClause)
-    watcher.addClause(learnedClause)
-    decisionLevel = level
-  }
-
-  private fun decide() {
-    decisionLevel++
-    val unassignedLiteral = formula.clauses.flatMap { it.literals }.find { !model.hasVariable(it) }!!   // Move this logic into the model and optimize it
-    implicationGraph.addDecision(unassignedLiteral, decisionLevel)
-    model.addLiteral(unassignedLiteral, decisionLevel)
-    watcher.addLiteral(unassignedLiteral)
-  }
-
-  private fun unitPropagation() {
-    val unitClause = watcher.unitClause()
-    val unitLiteral = unitClause?.literals?.find { !model.hasLiteral(it.opposite()) }
-    if (unitLiteral != null) {
-      implicationGraph.addImplication(unitLiteral, decisionLevel, unitClause)
-      model.addLiteral(unitLiteral, decisionLevel)
-      watcher.addLiteral(unitLiteral)
+    while (true) {
+      if (hasConflict()) { if (!resolveConflict()) return Unsatisfiable }
+      else if (modelIsPartial()) decision()
+      else return Satisfiable
       unitPropagation()
     }
   }
 
-  fun getModel() = model.assignment()
+  private fun resolveConflict(): Boolean {
+    if (safeMode && !hasConflict()) throw IllegalStateException("Conflict not found")
+    if (decisionLevel == 0) return false
+    val (learnedClause, level) = analyzeConflict()
+    backjump(level)
+    learn(learnedClause)
+    return true
+  }
 
-  private fun hasConflict(): Boolean = watcher.conflictClause() != null
-  private fun modelIsPartial(): Boolean = model.size() < formula.totalVariables
+  private fun analyzeConflict(): Pair<Clause, Int> {
+    if (safeMode && watcher.conflictClause() == null) throw IllegalStateException("Conflict clause not found")
+    return implicationGraph.analyzeConflict(watcher.conflictClause()!!)
+  }
+
+  private fun backjump(level: Int) {
+    implicationGraph.backjump(level)
+    Model.backjump(level)
+    watcher.backJump(level)
+    decisionLevel = level
+  }
+
+  private fun learn(learnedClause: Clause) {
+    watcher.addClause(learnedClause)
+  }
+
+  private fun decision() {
+    decisionLevel++
+    val unassignedLiteral = decider.decide()
+    implicationGraph.addDecision(unassignedLiteral, decisionLevel)
+    Model.addLiteral(unassignedLiteral, decisionLevel)
+    watcher.addLiteral(unassignedLiteral)
+  }
+
+  private fun unitPropagation() {
+    while (true) {
+      val (unitLiteral, unitClause) = watcher.unitClause() ?: break
+      implicationGraph.addImplication(unitLiteral, decisionLevel, unitClause)
+      Model.addLiteral(unitLiteral, decisionLevel)
+      watcher.addLiteral(unitLiteral)
+    }
+  }
+
+  fun getModel() = Model.assignment()
+
+  private fun hasConflict(): Boolean = watcher.conflictClause() != null  // TODO: optimize this check
+  private fun modelIsPartial(): Boolean = Model.size() < numVariables
 }

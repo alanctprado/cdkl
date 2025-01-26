@@ -3,12 +3,11 @@ package com.alanprado
 abstract class Watcher(formula: Formula) {
   val watchedClauses: MutableList<Clause> = formula.clauses.toMutableList()
   var numClauses: Int = formula.size
-  val model = Model
   abstract fun addClause(clause: Clause): Unit
   abstract fun addLiteral(literal: Literal): Unit
   abstract fun backJump(level: Int): Unit
   abstract fun conflictClause(): Clause?
-  abstract fun unitClause(): Clause?
+  abstract fun unitClause(): Pair<Literal, Clause>?
 }
 
 class BasicWatcher(formula: Formula) : Watcher(formula) {
@@ -18,13 +17,15 @@ class BasicWatcher(formula: Formula) : Watcher(formula) {
   }
 
   override fun conflictClause() = watchedClauses.find { clause ->
-    clause.literals.all { literal -> model.hasLiteral(literal.opposite()) }
+    clause.literals.all { literal -> Model.hasLiteral(literal.opposite()) }
   }
 
-  override fun unitClause() = watchedClauses.filterNot { clause ->
-    clause.literals.any { literal -> model.hasLiteral(literal) }
+  override fun unitClause(): Pair<Literal, Clause>? = watchedClauses.filterNot { clause ->
+    clause.literals.any { literal -> Model.hasLiteral(literal) }
   }.find { clause ->
-    clause.literals.count { literal -> model.hasLiteral(literal.opposite()) } == clause.size - 1
+    clause.literals.count { literal -> Model.hasLiteral(literal.opposite()) } == clause.size - 1
+  }?.let { clause ->
+    clause.literals.find { !Model.hasLiteral(it.opposite()) }!! to clause
   }
 
   override fun addLiteral(literal: Literal) {}
@@ -73,17 +74,17 @@ class TwoLiteralWatcher(formula: Formula, private val safeMode: Boolean = true) 
   override fun conflictClause(): Clause? =
     unsatisfiedClauses.find { it.watchedLiterals.isEmpty() }?.index?.let { watchedClauses[it] }
 
-  override fun unitClause(): Clause? =
-    unsatisfiedClauses.find { it.watchedLiterals.size == 1 }?.index?.let { watchedClauses[it] }
+  override fun unitClause(): Pair<Literal, Clause>? =
+    unsatisfiedClauses.find { it.watchedLiterals.size == 1 }?.let { it.watchedLiterals[0] to watchedClauses[it.index] }
 
   private fun processClause(index: Int, clause: Clause) {
     val unassignedLiterals = mutableListOf<Literal>()
     var minimumLevel = -1
     for (literal in clause.literals) {
-      val level = model.levelOf(literal)
+      val level = Model.levelOf(literal)
       if (level != null) {
         minimumLevel = if (minimumLevel == -1) level else minOf(minimumLevel, level)
-      } else if (unassignedLiterals.size < 2 && !model.hasLiteral(literal.opposite())) {
+      } else if (unassignedLiterals.size < 2 && !Model.hasLiteral(literal.opposite())) {
         unassignedLiterals.add(literal)
       }
     }
