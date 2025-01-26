@@ -4,6 +4,7 @@ import com.alanprado.SolverResult.*
 
 class CDCL(formula: Formula) {
   private var decisionLevel = 0
+  // TODO: initialize the following three components using factories
   private val implicationGraph = ImplicationGraph(ConflictStrategy.DECISIONS)
   private val watcher = TwoLiteralWatcher(formula)
   private val decider = BasicDecider(formula)
