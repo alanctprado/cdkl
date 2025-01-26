@@ -1,30 +1,26 @@
 package com.alanprado
 
-// REFACTOR MODEL
-
-private data class Assignment(val literal: Literal, val level: Int)
-
 object Model {
-  private val assignments = mutableListOf<Assignment>() // Change to Set?
+  private val assignments = mutableMapOf<Literal, Int>()
 
   override fun toString(): String = assignments.toString()
 
   fun addLiteral(literal: Literal, level: Int) {
-    assert(!hasVariable(literal))
-    assignments.add(Assignment(literal, level))
+    if (safeMode && hasVariable(literal)) throw IllegalStateException("Model already has assignment for $literal")
+    assignments[literal] = level
   }
 
   fun backjump(level: Int) {
-    assignments -= assignments.filter { it.level > level }.toSet()
+    assignments -= assignments.filter { it.value > level }.keys
   }
 
   fun size() = assignments.size
 
-  fun hasLiteral(literal: Literal): Boolean = assignments.any { it.literal == literal }
+  fun hasLiteral(literal: Literal): Boolean = assignments.contains(literal)
 
-  fun hasVariable(literal: Literal): Boolean = assignments.any { it.literal == literal || it.literal == literal.opposite() }
+  fun hasVariable(literal: Literal): Boolean = hasLiteral(literal) || hasLiteral(literal.opposite())
 
-  fun levelOf(literal: Literal): Int? = assignments.find { it.literal == literal }?.level
+  fun levelOf(literal: Literal): Int? = assignments[literal]
 
-  fun assignment() = assignments.map { it.literal }
+  fun assignment() = assignments.keys.toList()
 }

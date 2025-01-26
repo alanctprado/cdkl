@@ -2,10 +2,10 @@ package com.alanprado
 
 import com.alanprado.SolverResult.*
 
-class CDCL(formula: Formula, private val safeMode: Boolean = true) {
+class CDCL(formula: Formula) {
   private var decisionLevel = 0
-  private val implicationGraph = ImplicationGraph(ConflictStrategy.DECISIONS, safeMode)
-  private val watcher = TwoLiteralWatcher(formula, safeMode)
+  private val implicationGraph = ImplicationGraph(ConflictStrategy.DECISIONS)
+  private val watcher = TwoLiteralWatcher(formula)
   private val decider = BasicDecider(formula)
   private val numVariables = formula.numVariables
 

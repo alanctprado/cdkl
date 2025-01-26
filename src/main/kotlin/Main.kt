@@ -5,6 +5,8 @@ import com.github.ajalt.clikt.core.main
 import com.github.ajalt.clikt.parameters.arguments.argument
 import com.alanprado.SolverResult.*
 
+const val safeMode = true
+
 class CdklCommand : CliktCommand() {
   private val file: String by argument()
 

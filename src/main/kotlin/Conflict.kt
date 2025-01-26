@@ -8,12 +8,12 @@ private data class Node(val literal: Literal, val type: NodeType, val decisionLe
   override fun toString(): String = "${if (type == NodeType.DECISION) "D:" else "P:"}$literal@$decisionLevel"
 }
 
-class ImplicationGraph(private val strategy: ConflictStrategy, private val safeMode: Boolean = true) {
+class ImplicationGraph(private val strategy: ConflictStrategy) {
   private val implicationGraph = mutableMapOf<Node, MutableList<Node>>()
 
   fun addDecision(literal: Literal, level: Int) {
     if (safeMode) ensureVariableNotInGraph(literal)
-    implicationGraph[Node(literal, NodeType.DECISION, level)] = mutableListOf<Node>()
+    implicationGraph[Node(literal, NodeType.DECISION, level)] = mutableListOf()
   }
 
   fun addImplication(unitLiteral: Literal, level: Int, clause: Clause) {
@@ -22,7 +22,7 @@ class ImplicationGraph(private val strategy: ConflictStrategy, private val safeM
       ensureAllOtherLiteralsOccurWithOppositePolarity(unitLiteral, clause)
     }
     val unitNode = Node(unitLiteral, NodeType.IMPLICATION, level)
-    implicationGraph[unitNode] = mutableListOf<Node>()
+    implicationGraph[unitNode] = mutableListOf()
     for (literal in clause.literals) {
       if (literal == unitLiteral) continue
       implicationGraph[unitNode]!!.add(implicationGraph.keys.find { it.literal == literal.opposite() }!!)

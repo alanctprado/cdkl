@@ -3,9 +3,9 @@ package com.alanprado
 abstract class Watcher(formula: Formula) {
   val watchedClauses: MutableList<Clause> = formula.clauses.toMutableList()
   var numClauses: Int = formula.size
-  abstract fun addClause(clause: Clause): Unit
-  abstract fun addLiteral(literal: Literal): Unit
-  abstract fun backJump(level: Int): Unit
+  abstract fun addClause(clause: Clause)
+  abstract fun addLiteral(literal: Literal)
+  abstract fun backJump(level: Int)
   abstract fun conflictClause(): Clause?
   abstract fun unitClause(): Pair<Literal, Clause>?
 }
@@ -32,7 +32,7 @@ class BasicWatcher(formula: Formula) : Watcher(formula) {
   override fun backJump(level: Int) {}
 }
 
-class TwoLiteralWatcher(formula: Formula, private val safeMode: Boolean = true) : Watcher(formula) {
+class TwoLiteralWatcher(formula: Formula) : Watcher(formula) {
   data class SatisfiedClause(val index: Int, val level: Int)
   data class UnsatisfiedClause(val index: Int, val watchedLiterals: List<Literal>) {
     override fun toString(): String = watchedLiterals.toString()
