@@ -16,7 +16,7 @@ This project aims to have the following characteristics:
 
 3. **Encourage extensibility**: Offer a modular structure that allows developers to experiment with different heuristics in CDCL solving. Automated tests and benchmarks should assist in verifying implementation and enable performance comparisons.
 
-## Current Features
+### Current Features
 
 - Support for the [DIMACS CNF input format](https://people.sc.fsu.edu/~jburkardt/data/cnf/cnf.html) and output in the [SAT competition format](https://satcompetition.github.io/2024/output.html).
 - Basic **DPLL SAT solver**.
@@ -25,7 +25,7 @@ This project aims to have the following characteristics:
   - Non-chronological backjumping.
 - Unit propagation using **two watched literals**.
 
-## Future Plans
+### Future Plans
 
 - Enhance the DPLL SAT solver.
 - Add comprehensive theoretical documentation for all implemented features, aligning with the project's second goal.
@@ -33,3 +33,25 @@ This project aims to have the following characteristics:
   - First UIPs (Unique Implication Points).
   - VSIDS (Variable State Independent Decaying Sum) heuristic for literal decision-making.
 - Improve the overall project structure and build system.
+
+## How to Run
+
+For the best experience, it's recommended to use IntelliJ IDEA to explore and execute the project. The IDE provides an intuitive interface and excellent support for Kotlin projects.
+
+Alternatively, you can:
+
+### Execute Using Gradle
+To run this project, you can use the Gradle Wrapper (`gradlew`). The Gradle Wrapper is a script that comes with the project and ensures you use the correct Gradle version, without needing to install Gradle separately on your system.
+
+To execute the program, use the command `./gradlew run` (or `gradlew run` on Windows). The very first time you run this command, Gradle will also need to build the project, which might take a bit longer. Alternatively, you can explicitly build the project first using `./gradlew build` (or `gradlew build` on Windows).
+
+This program requires a DIMACS file as input. To provide the file location, pass it as an argument using the `--args` option:
+
+```bash
+./gradlew run --args="/path/to/your/dimacs/file.cnf"
+```
+
+Replace `/path/to/your/dimacs/file.cnf` with the actual path to your DIMACS file.
+
+### Compile into a Binary
+*(TODO: Instructions coming soon)*
