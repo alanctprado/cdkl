@@ -54,4 +54,4 @@ This program requires a DIMACS file as input. To provide the file location, pass
 Replace `/path/to/your/dimacs/file.cnf` with the actual path to your DIMACS file.
 
 ### Compile into a Binary
-*(TODO: Instructions coming soon)*
+*(TODO: Instructions coming soon. For more information, check [this](https://kotlinlang.org/docs/command-line.html).)*
