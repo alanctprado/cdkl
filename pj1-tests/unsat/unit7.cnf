@@ -1,6 +1,9 @@
 c CaDiCaL
 c https://github.com/arminbiere/cadical/tree/master/test/cnf
-c
-c
-p cnf 0 1
-0
+c 
+p cnf 4 5
+1 2 3 -4 0
+1 2 3 4 0
+1 2 -3 0
+1 -2 0
+-1 0

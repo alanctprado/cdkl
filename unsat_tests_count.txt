@@ -1,0 +1,75 @@
+
+/home/alan/IdeaProjects/cdkl/pj1-tests/unsat/add4.cnf
+p cnf 60 157
+
+/home/alan/IdeaProjects/cdkl/pj1-tests/unsat/add8.cnf
+p cnf 149 400
+
+/home/alan/IdeaProjects/cdkl/pj1-tests/unsat/cnfgen-parity-9.cnf
+p cnf 36 261
+
+/home/alan/IdeaProjects/cdkl/pj1-tests/unsat/cnfgen-peb-pyramid-20.cnf
+p cnf 231 232
+
+/home/alan/IdeaProjects/cdkl/pj1-tests/unsat/cnfgen-php-5-4.cnf
+p cnf 20 45
+
+/home/alan/IdeaProjects/cdkl/pj1-tests/unsat/cnfgen-ram-4-3-10.cnf
+p cnf 45 330
+
+/home/alan/IdeaProjects/cdkl/pj1-tests/unsat/cnfgen-tseitin-10-4.cnf
+p cnf 20 80
+
+/home/alan/IdeaProjects/cdkl/pj1-tests/unsat/elimclash.cnf
+p cnf 5 8
+
+/home/alan/IdeaProjects/cdkl/pj1-tests/unsat/false.cnf
+p cnf 0 1
+
+/home/alan/IdeaProjects/cdkl/pj1-tests/unsat/full1.cnf
+p cnf 1 2
+
+/home/alan/IdeaProjects/cdkl/pj1-tests/unsat/full3.cnf
+p cnf 3 8
+
+/home/alan/IdeaProjects/cdkl/pj1-tests/unsat/full5.cnf
+p cnf 5 32
+
+/home/alan/IdeaProjects/cdkl/pj1-tests/unsat/full7.cnf
+p cnf 7 128
+
+/home/alan/IdeaProjects/cdkl/pj1-tests/unsat/ph6.cnf
+p cnf 42 133
+
+/home/alan/IdeaProjects/cdkl/pj1-tests/unsat/unit7.cnf
+p cnf 4 5
+
+/home/alan/IdeaProjects/cdkl/pj1-tests/unsat/uuf100-010.cnf
+p cnf 100  430 
+
+/home/alan/IdeaProjects/cdkl/pj1-tests/unsat/uuf100-0117.cnf
+p cnf 100  430 
+
+/home/alan/IdeaProjects/cdkl/pj1-tests/unsat/uuf100-0120.cnf
+p cnf 100  430 
+
+/home/alan/IdeaProjects/cdkl/pj1-tests/unsat/uuf100-012.cnf
+p cnf 100  430 
+
+/home/alan/IdeaProjects/cdkl/pj1-tests/unsat/uuf100-0130.cnf
+p cnf 100  430 
+
+/home/alan/IdeaProjects/cdkl/pj1-tests/unsat/uuf100-0147.cnf
+p cnf 100  430 
+
+/home/alan/IdeaProjects/cdkl/pj1-tests/unsat/uuf100-0151.cnf
+p cnf 100  430 
+
+/home/alan/IdeaProjects/cdkl/pj1-tests/unsat/uuf100-0161.cnf
+p cnf 100  430 
+
+/home/alan/IdeaProjects/cdkl/pj1-tests/unsat/uuf100-0175.cnf
+p cnf 100  430 
+
+/home/alan/IdeaProjects/cdkl/pj1-tests/unsat/uuf100-0182.cnf
+p cnf 100  430 

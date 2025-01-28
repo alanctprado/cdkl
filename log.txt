@@ -1,0 +1,52 @@
+[  7%] Building CXX object CMakeFiles/minisat-lib-static.dir/minisat/utils/Options.cc.o
+In file included from /home/alan/logic/minisat/minisat/utils/Options.cc:21:
+/home/alan/logic/minisat/minisat/utils/Options.h:285:29: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
+  285 |             fprintf(stderr, "%4"PRIi64, range.begin);
+      |                             ^
+/home/alan/logic/minisat/minisat/utils/Options.h:291:29: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
+  291 |             fprintf(stderr, "%4"PRIi64, range.end);
+      |                             ^
+/home/alan/logic/minisat/minisat/utils/Options.h:293:25: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
+  293 |         fprintf(stderr, "] (default: %"PRIi64")\n", value);
+      |                         ^
+[ 14%] Building CXX object CMakeFiles/minisat-lib-static.dir/minisat/utils/System.cc.o
+[ 21%] Building CXX object CMakeFiles/minisat-lib-static.dir/minisat/core/Solver.cc.o
+In file included from /home/alan/logic/minisat/minisat/core/Solver.h:28,
+                 from /home/alan/logic/minisat/minisat/core/Solver.cc:26:
+/home/alan/logic/minisat/minisat/utils/Options.h:285:29: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
+  285 |             fprintf(stderr, "%4"PRIi64, range.begin);
+      |                             ^
+/home/alan/logic/minisat/minisat/utils/Options.h:291:29: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
+  291 |             fprintf(stderr, "%4"PRIi64, range.end);
+      |                             ^
+/home/alan/logic/minisat/minisat/utils/Options.h:293:25: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
+  293 |         fprintf(stderr, "] (default: %"PRIi64")\n", value);
+      |                         ^
+/home/alan/logic/minisat/minisat/core/Solver.cc:995:12: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
+  995 |     printf("restarts              : %"PRIu64"\n", starts);
+      |            ^
+/home/alan/logic/minisat/minisat/core/Solver.cc:996:12: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
+  996 |     printf("conflicts             : %-12"PRIu64"   (%.0f /sec)\n", conflicts   , conflicts   /cpu_time);
+      |            ^
+/home/alan/logic/minisat/minisat/core/Solver.cc:997:12: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
+  997 |     printf("decisions             : %-12"PRIu64"   (%4.2f %% random) (%.0f /sec)\n", decisions, (float)rnd_decisions*100 / (float)decisions, decisions   /cpu_time);
+      |            ^
+/home/alan/logic/minisat/minisat/core/Solver.cc:998:12: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
+  998 |     printf("propagations          : %-12"PRIu64"   (%.0f /sec)\n", propagations, propagations/cpu_time);
+      |            ^
+/home/alan/logic/minisat/minisat/core/Solver.cc:999:12: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
+  999 |     printf("conflict literals     : %-12"PRIu64"   (%4.2f %% deleted)\n", tot_literals, (max_literals - tot_literals)*100 / (double)max_literals);
+      |            ^
+In file included from /home/alan/logic/minisat/minisat/core/Solver.h:29:
+/home/alan/logic/minisat/minisat/core/SolverTypes.h:55:16: error: friend declaration of ‘Minisat::Lit mkLit(Minisat::Var, bool)’ specifies default arguments and isn’t a definition [-fpermissive]
+   55 |     friend Lit mkLit(Var var, bool sign = false);
+      |                ^~~~~
+/home/alan/logic/minisat/minisat/core/SolverTypes.h:63:14: error: friend declaration of ‘Minisat::Lit Minisat::mkLit(Var, bool)’ specifies default arguments and isn’t the only declaration [-fpermissive]
+   63 | inline  Lit  mkLit     (Var var, bool sign) { Lit p; p.x = var + var + (int)sign; return p; }
+      |              ^~~~~
+/home/alan/logic/minisat/minisat/core/SolverTypes.h:55:16: note: previous declaration of ‘Minisat::Lit Minisat::mkLit(Var, bool)’
+   55 |     friend Lit mkLit(Var var, bool sign = false);
+      |                ^~~~~
+make[2]: *** [CMakeFiles/minisat-lib-static.dir/build.make:104: CMakeFiles/minisat-lib-static.dir/minisat/core/Solver.cc.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:89: CMakeFiles/minisat-lib-static.dir/all] Error 2
+make: *** [Makefile:136: all] Error 2

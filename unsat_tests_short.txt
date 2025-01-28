@@ -1,0 +1,64 @@
+/home/alan/IdeaProjects/cdkl/pj1-tests/unsat/add4.cnf
+s UNSATISFIABLE
+real	0m0.691s
+/home/alan/IdeaProjects/cdkl/pj1-tests/unsat/add8.cnf
+real	1m0.326s
+/home/alan/IdeaProjects/cdkl/pj1-tests/unsat/cnfgen-parity-9.cnf
+s UNSATISFIABLE
+real	0m2.148s
+/home/alan/IdeaProjects/cdkl/pj1-tests/unsat/cnfgen-peb-pyramid-20.cnf
+s UNSATISFIABLE
+real	0m2.478s
+/home/alan/IdeaProjects/cdkl/pj1-tests/unsat/cnfgen-php-5-4.cnf
+s UNSATISFIABLE
+real	0m2.014s
+/home/alan/IdeaProjects/cdkl/pj1-tests/unsat/cnfgen-ram-4-3-10.cnf
+real	1m0.327s
+/home/alan/IdeaProjects/cdkl/pj1-tests/unsat/cnfgen-tseitin-10-4.cnf
+s UNSATISFIABLE
+real	0m3.553s
+/home/alan/IdeaProjects/cdkl/pj1-tests/unsat/elimclash.cnf
+s UNSATISFIABLE
+real	0m2.116s
+/home/alan/IdeaProjects/cdkl/pj1-tests/unsat/false.cnf
+s UNSATISFIABLE
+real	0m1.919s
+/home/alan/IdeaProjects/cdkl/pj1-tests/unsat/full1.cnf
+s UNSATISFIABLE
+real	0m1.933s
+/home/alan/IdeaProjects/cdkl/pj1-tests/unsat/full3.cnf
+s UNSATISFIABLE
+real	0m1.963s
+/home/alan/IdeaProjects/cdkl/pj1-tests/unsat/full5.cnf
+s UNSATISFIABLE
+real	0m1.943s
+/home/alan/IdeaProjects/cdkl/pj1-tests/unsat/full7.cnf
+s UNSATISFIABLE
+real	0m2.175s
+/home/alan/IdeaProjects/cdkl/pj1-tests/unsat/ph6.cnf
+s UNSATISFIABLE
+real	0m8.727s
+/home/alan/IdeaProjects/cdkl/pj1-tests/unsat/unit7.cnf
+s UNSATISFIABLE
+real	0m1.983s
+/home/alan/IdeaProjects/cdkl/pj1-tests/unsat/uuf100-010.cnf
+real	1m0.328s
+/home/alan/IdeaProjects/cdkl/pj1-tests/unsat/uuf100-0117.cnf
+real	1m0.326s
+/home/alan/IdeaProjects/cdkl/pj1-tests/unsat/uuf100-0120.cnf
+real	1m0.326s
+/home/alan/IdeaProjects/cdkl/pj1-tests/unsat/uuf100-012.cnf
+real	1m0.333s
+/home/alan/IdeaProjects/cdkl/pj1-tests/unsat/uuf100-0130.cnf
+real	1m0.349s
+/home/alan/IdeaProjects/cdkl/pj1-tests/unsat/uuf100-0147.cnf
+real	1m0.329s
+/home/alan/IdeaProjects/cdkl/pj1-tests/unsat/uuf100-0151.cnf
+s UNSATISFIABLE
+real	0m51.011s
+/home/alan/IdeaProjects/cdkl/pj1-tests/unsat/uuf100-0161.cnf
+real	1m0.328s
+/home/alan/IdeaProjects/cdkl/pj1-tests/unsat/uuf100-0175.cnf
+real	1m0.336s
+/home/alan/IdeaProjects/cdkl/pj1-tests/unsat/uuf100-0182.cnf
+real	1m0.330s

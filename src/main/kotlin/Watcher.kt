@@ -33,10 +33,14 @@ class BasicWatcher(formula: Formula) : Watcher(formula) {
 }
 
 class TwoLiteralWatcher(formula: Formula) : Watcher(formula) {
-  data class SatisfiedClause(val index: Int, val level: Int)
-  data class UnsatisfiedClause(val index: Int, val watchedLiterals: List<Literal>) {
-    override fun toString(): String = watchedLiterals.toString()
+  data class SatisfiedClause(val index: Int, val level: Int) {
+    override fun toString(): String = "($index@$level)"
   }
+  data class UnsatisfiedClause(val index: Int, val watchedLiterals: List<Literal>) {
+    override fun toString(): String = "$index@$watchedLiterals"
+  }
+
+  override fun toString(): String = watchedClauses.toString()
 
   private val satisfiedClauses = mutableListOf<SatisfiedClause>()
   private val unsatisfiedClauses = mutableListOf<UnsatisfiedClause>()
@@ -65,9 +69,12 @@ class TwoLiteralWatcher(formula: Formula) : Watcher(formula) {
   }
 
   override fun backJump(level: Int) {
-    val badIndices = satisfiedClauses.filter { it.level > level }.map { it.index }
+    val unsatisfiedBadIndices = unsatisfiedClauses.filter { it.watchedLiterals.size < 2 }.map { it.index }
+    unsatisfiedClauses.removeIf { it.watchedLiterals.size < 2 }
+    for (index in unsatisfiedBadIndices) processClause(index, watchedClauses[index])
+    val satisfiedBadIndices = satisfiedClauses.filter { it.level > level }.map { it.index }
     satisfiedClauses.removeIf { it.level > level }
-    for (index in badIndices) processClause(index, watchedClauses[index])
+    for (index in satisfiedBadIndices) processClause(index, watchedClauses[index])
     if (safeMode) validateWatcher()
   }
 

@@ -24,7 +24,7 @@ class Parser(private val filePath: String) {
     val (expectedVariables, expectedClauses) = parseAndValidateProblemLine(problemLine)
 
     val clauses = lines
-      .filterNot { it.startsWith("c ") || it.startsWith("p ") }
+      .filterNot { it.startsWith("c") || it.startsWith("p ") }
     validateClauses(clauses, expectedVariables, expectedClauses)
   }
 
@@ -32,7 +32,7 @@ class Parser(private val filePath: String) {
     val rawClauses = file.readLines()
       .map { it.trim() }
       .filter { it.isNotBlank() }
-      .filterNot { it.startsWith("c ") || it.startsWith("p ") }
+      .filterNot { it.startsWith("c") || it.startsWith("p ") }
     val dimacsClauses = rawClauses
       .map { cl -> cl.split(Regex("""\s+"""))
         .map { va -> va.toInt() }.dropLast(1) }
@@ -59,7 +59,7 @@ class Parser(private val filePath: String) {
   private fun validateClauses(clauses: List<String>, expectedVariables: Int, expectedClauses: Int) {
     val literals = mutableSetOf<Int>()
     for (clause in clauses) {
-      if (!Regex("""^(-?\d+\s+)+0$""").matches(clause))
+      if (!Regex("""^(-?\d+\s+)*0$""").matches(clause))
         throwFormattingError("Invalid line: $clause")
       val clauseVariables = clause
         .split(Regex("""\s+"""))

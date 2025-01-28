@@ -1,0 +1,72 @@
+
+/home/alan/IdeaProjects/cdkl/pj1-tests/sat/block0.cnf
+p cnf 3 3
+
+/home/alan/IdeaProjects/cdkl/pj1-tests/sat/cnfgen-php-10-10.cnf
+p cnf 100 460
+
+/home/alan/IdeaProjects/cdkl/pj1-tests/sat/elimredundant.cnf
+p cnf 5 8
+
+/home/alan/IdeaProjects/cdkl/pj1-tests/sat/prime121.cnf
+p cnf 329 952
+
+/home/alan/IdeaProjects/cdkl/pj1-tests/sat/prime1369.cnf
+p cnf 989 2908
+
+/home/alan/IdeaProjects/cdkl/pj1-tests/sat/prime1681.cnf
+p cnf 989 2908
+
+/home/alan/IdeaProjects/cdkl/pj1-tests/sat/prime169.cnf
+p cnf 461 1342
+
+/home/alan/IdeaProjects/cdkl/pj1-tests/sat/prime1849.cnf
+p cnf 989 2908
+
+/home/alan/IdeaProjects/cdkl/pj1-tests/sat/prime841.cnf
+p cnf 791 2320
+
+/home/alan/IdeaProjects/cdkl/pj1-tests/sat/prime961.cnf
+p cnf 791 2320
+
+/home/alan/IdeaProjects/cdkl/pj1-tests/sat/sat10.cnf
+p cnf 3 7
+
+/home/alan/IdeaProjects/cdkl/pj1-tests/sat/sat12.cnf
+p cnf 3 7
+
+/home/alan/IdeaProjects/cdkl/pj1-tests/sat/sqrt10201.cnf
+p cnf 303 841
+
+/home/alan/IdeaProjects/cdkl/pj1-tests/sat/sqrt1042441.cnf
+p cnf 659 1877
+
+/home/alan/IdeaProjects/cdkl/pj1-tests/sat/sqrt10609.cnf
+p cnf 303 841
+
+/home/alan/IdeaProjects/cdkl/pj1-tests/sat/sqrt11449.cnf
+p cnf 303 841
+
+/home/alan/IdeaProjects/cdkl/pj1-tests/sat/uf20-01000.cnf
+p cnf 20  91 
+
+/home/alan/IdeaProjects/cdkl/pj1-tests/sat/uf20-0100.cnf
+p cnf 20  91 
+
+/home/alan/IdeaProjects/cdkl/pj1-tests/sat/uf20-0101.cnf
+p cnf 20  91 
+
+/home/alan/IdeaProjects/cdkl/pj1-tests/sat/uf20-0102.cnf
+p cnf 20  91 
+
+/home/alan/IdeaProjects/cdkl/pj1-tests/sat/uf20-0103.cnf
+p cnf 20  91 
+
+/home/alan/IdeaProjects/cdkl/pj1-tests/sat/uf20-0104.cnf
+p cnf 20  91 
+
+/home/alan/IdeaProjects/cdkl/pj1-tests/sat/uf20-0105.cnf
+p cnf 20  91 
+
+/home/alan/IdeaProjects/cdkl/pj1-tests/sat/uf20-0106.cnf
+p cnf 20  91 

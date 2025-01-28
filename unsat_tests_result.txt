@@ -1,0 +1,369 @@
+
+/home/alan/IdeaProjects/cdkl/pj1-tests/unsat/add4.cnf
+> Task :checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :compileKotlin UP-TO-DATE
+> Task :compileJava NO-SOURCE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+
+> Task :run
+s UNSATISFIABLE
+
+BUILD SUCCESSFUL in 640ms
+3 actionable tasks: 1 executed, 2 up-to-date
+
+real	0m0.691s
+user	0m1.013s
+sys	0m0.038s
+
+/home/alan/IdeaProjects/cdkl/pj1-tests/unsat/add8.cnf
+> Task :checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :compileKotlin UP-TO-DATE
+> Task :compileJava NO-SOURCE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+> Task :run
+
+real	1m0.326s
+user	0m1.277s
+sys	0m0.101s
+
+/home/alan/IdeaProjects/cdkl/pj1-tests/unsat/cnfgen-parity-9.cnf
+> Task :checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :compileKotlin UP-TO-DATE
+> Task :compileJava NO-SOURCE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+
+> Task :run
+s UNSATISFIABLE
+
+BUILD SUCCESSFUL in 2s
+3 actionable tasks: 1 executed, 2 up-to-date
+
+real	0m2.148s
+user	0m2.504s
+sys	0m0.153s
+
+/home/alan/IdeaProjects/cdkl/pj1-tests/unsat/cnfgen-peb-pyramid-20.cnf
+> Task :checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :compileKotlin UP-TO-DATE
+> Task :compileJava NO-SOURCE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+
+> Task :run
+s UNSATISFIABLE
+
+BUILD SUCCESSFUL in 2s
+3 actionable tasks: 1 executed, 2 up-to-date
+
+real	0m2.478s
+user	0m5.368s
+sys	0m0.238s
+
+/home/alan/IdeaProjects/cdkl/pj1-tests/unsat/cnfgen-php-5-4.cnf
+> Task :checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :compileKotlin UP-TO-DATE
+> Task :compileJava NO-SOURCE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+
+> Task :run
+s UNSATISFIABLE
+
+BUILD SUCCESSFUL in 1s
+3 actionable tasks: 1 executed, 2 up-to-date
+
+real	0m2.014s
+user	0m4.118s
+sys	0m0.217s
+
+/home/alan/IdeaProjects/cdkl/pj1-tests/unsat/cnfgen-ram-4-3-10.cnf
+> Task :checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :compileKotlin UP-TO-DATE
+> Task :compileJava NO-SOURCE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+> Task :run
+
+real	1m0.327s
+user	0m4.121s
+sys	0m0.231s
+
+/home/alan/IdeaProjects/cdkl/pj1-tests/unsat/cnfgen-tseitin-10-4.cnf
+> Task :checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :compileKotlin UP-TO-DATE
+> Task :compileJava NO-SOURCE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+
+> Task :run
+s UNSATISFIABLE
+
+BUILD SUCCESSFUL in 3s
+3 actionable tasks: 1 executed, 2 up-to-date
+
+real	0m3.553s
+user	0m2.798s
+sys	0m0.130s
+
+/home/alan/IdeaProjects/cdkl/pj1-tests/unsat/elimclash.cnf
+> Task :checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :compileKotlin UP-TO-DATE
+> Task :compileJava NO-SOURCE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+
+> Task :run
+s UNSATISFIABLE
+
+BUILD SUCCESSFUL in 2s
+3 actionable tasks: 1 executed, 2 up-to-date
+
+real	0m2.116s
+user	0m4.143s
+sys	0m0.176s
+
+/home/alan/IdeaProjects/cdkl/pj1-tests/unsat/false.cnf
+> Task :checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :compileKotlin UP-TO-DATE
+> Task :compileJava NO-SOURCE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+
+> Task :run
+s UNSATISFIABLE
+
+BUILD SUCCESSFUL in 1s
+3 actionable tasks: 1 executed, 2 up-to-date
+
+real	0m1.919s
+user	0m3.778s
+sys	0m0.173s
+
+/home/alan/IdeaProjects/cdkl/pj1-tests/unsat/full1.cnf
+> Task :checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :compileKotlin UP-TO-DATE
+> Task :compileJava NO-SOURCE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+
+> Task :run
+s UNSATISFIABLE
+
+BUILD SUCCESSFUL in 1s
+3 actionable tasks: 1 executed, 2 up-to-date
+
+real	0m1.933s
+user	0m4.098s
+sys	0m0.204s
+
+/home/alan/IdeaProjects/cdkl/pj1-tests/unsat/full3.cnf
+> Task :checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :compileKotlin UP-TO-DATE
+> Task :compileJava NO-SOURCE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+
+> Task :run
+s UNSATISFIABLE
+
+BUILD SUCCESSFUL in 1s
+3 actionable tasks: 1 executed, 2 up-to-date
+
+real	0m1.963s
+user	0m3.821s
+sys	0m0.162s
+
+/home/alan/IdeaProjects/cdkl/pj1-tests/unsat/full5.cnf
+> Task :checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :compileKotlin UP-TO-DATE
+> Task :compileJava NO-SOURCE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+
+> Task :run
+s UNSATISFIABLE
+
+BUILD SUCCESSFUL in 1s
+3 actionable tasks: 1 executed, 2 up-to-date
+
+real	0m1.943s
+user	0m3.750s
+sys	0m0.194s
+
+/home/alan/IdeaProjects/cdkl/pj1-tests/unsat/full7.cnf
+> Task :checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :compileKotlin UP-TO-DATE
+> Task :compileJava NO-SOURCE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+
+> Task :run
+s UNSATISFIABLE
+
+BUILD SUCCESSFUL in 2s
+3 actionable tasks: 1 executed, 2 up-to-date
+
+real	0m2.175s
+user	0m3.512s
+sys	0m0.160s
+
+/home/alan/IdeaProjects/cdkl/pj1-tests/unsat/ph6.cnf
+> Task :checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :compileKotlin UP-TO-DATE
+> Task :compileJava NO-SOURCE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+
+> Task :run
+s UNSATISFIABLE
+
+BUILD SUCCESSFUL in 8s
+3 actionable tasks: 1 executed, 2 up-to-date
+
+real	0m8.727s
+user	0m5.590s
+sys	0m0.249s
+
+/home/alan/IdeaProjects/cdkl/pj1-tests/unsat/unit7.cnf
+> Task :checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :compileKotlin UP-TO-DATE
+> Task :compileJava NO-SOURCE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+
+> Task :run
+s UNSATISFIABLE
+
+BUILD SUCCESSFUL in 1s
+3 actionable tasks: 1 executed, 2 up-to-date
+
+real	0m1.983s
+user	0m3.866s
+sys	0m0.136s
+
+/home/alan/IdeaProjects/cdkl/pj1-tests/unsat/uuf100-010.cnf
+> Task :checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :compileKotlin UP-TO-DATE
+> Task :compileJava NO-SOURCE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+> Task :run
+
+real	1m0.328s
+user	0m3.722s
+sys	0m0.287s
+
+/home/alan/IdeaProjects/cdkl/pj1-tests/unsat/uuf100-0117.cnf
+> Task :checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :compileKotlin UP-TO-DATE
+> Task :compileJava NO-SOURCE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+> Task :run
+
+real	1m0.326s
+user	0m3.571s
+sys	0m0.162s
+
+/home/alan/IdeaProjects/cdkl/pj1-tests/unsat/uuf100-0120.cnf
+> Task :checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :compileKotlin UP-TO-DATE
+> Task :compileJava NO-SOURCE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+> Task :run
+
+real	1m0.326s
+user	0m3.827s
+sys	0m0.249s
+
+/home/alan/IdeaProjects/cdkl/pj1-tests/unsat/uuf100-012.cnf
+> Task :checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :compileKotlin UP-TO-DATE
+> Task :compileJava NO-SOURCE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+> Task :run
+
+real	1m0.333s
+user	0m4.151s
+sys	0m0.258s
+
+/home/alan/IdeaProjects/cdkl/pj1-tests/unsat/uuf100-0130.cnf
+> Task :checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :compileKotlin UP-TO-DATE
+> Task :compileJava NO-SOURCE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+> Task :run
+
+real	1m0.349s
+user	0m4.865s
+sys	0m0.302s
+
+/home/alan/IdeaProjects/cdkl/pj1-tests/unsat/uuf100-0147.cnf
+> Task :checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :compileKotlin UP-TO-DATE
+> Task :compileJava NO-SOURCE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+> Task :run
+
+real	1m0.329s
+user	0m7.351s
+sys	0m0.360s
+
+/home/alan/IdeaProjects/cdkl/pj1-tests/unsat/uuf100-0151.cnf
+> Task :checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :compileKotlin UP-TO-DATE
+> Task :compileJava NO-SOURCE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+> Task :run
+s UNSATISFIABLE
+
+BUILD SUCCESSFUL in 50s
+3 actionable tasks: 1 executed, 2 up-to-date
+
+real	0m51.011s
+user	0m2.590s
+sys	0m0.206s
+
+/home/alan/IdeaProjects/cdkl/pj1-tests/unsat/uuf100-0161.cnf
+> Task :checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :compileKotlin UP-TO-DATE
+> Task :compileJava NO-SOURCE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+> Task :run
+
+real	1m0.328s
+user	0m3.180s
+sys	0m0.223s
+
+/home/alan/IdeaProjects/cdkl/pj1-tests/unsat/uuf100-0175.cnf
+> Task :checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :compileKotlin UP-TO-DATE
+> Task :compileJava NO-SOURCE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+> Task :run
+
+real	1m0.336s
+user	0m4.249s
+sys	0m0.250s
+
+/home/alan/IdeaProjects/cdkl/pj1-tests/unsat/uuf100-0182.cnf
+> Task :checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :compileKotlin UP-TO-DATE
+> Task :compileJava NO-SOURCE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+> Task :run
+
+real	1m0.330s
+user	0m4.389s
+sys	0m0.284s

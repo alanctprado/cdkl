@@ -35,8 +35,8 @@ class CDCL(formula: Formula) {
   }
 
   private fun backjump(level: Int) {
-    implicationGraph.backjump(level)
     Model.backjump(level)
+    implicationGraph.backjump(level)
     watcher.backJump(level)
     decisionLevel = level
   }

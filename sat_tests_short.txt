@@ -1,0 +1,69 @@
+/home/alan/IdeaProjects/cdkl/pj1-tests/sat/block0.cnf
+s SATISFIABLE
+real	0m0.597s
+/home/alan/IdeaProjects/cdkl/pj1-tests/sat/cnfgen-php-10-10.cnf
+real	1m0.325s
+/home/alan/IdeaProjects/cdkl/pj1-tests/sat/elimredundant.cnf
+s SATISFIABLE
+real	0m1.440s
+/home/alan/IdeaProjects/cdkl/pj1-tests/sat/prime121.cnf
+s SATISFIABLE
+real	0m3.393s
+/home/alan/IdeaProjects/cdkl/pj1-tests/sat/prime1369.cnf
+s SATISFIABLE
+real	0m58.154s
+/home/alan/IdeaProjects/cdkl/pj1-tests/sat/prime1681.cnf
+real	1m0.348s
+/home/alan/IdeaProjects/cdkl/pj1-tests/sat/prime169.cnf
+s SATISFIABLE
+real	0m11.945s
+/home/alan/IdeaProjects/cdkl/pj1-tests/sat/prime1849.cnf
+real	1m0.325s
+/home/alan/IdeaProjects/cdkl/pj1-tests/sat/prime841.cnf
+s SATISFIABLE
+real	0m21.141s
+/home/alan/IdeaProjects/cdkl/pj1-tests/sat/prime961.cnf
+s SATISFIABLE
+real	0m21.915s
+/home/alan/IdeaProjects/cdkl/pj1-tests/sat/sat10.cnf
+s SATISFIABLE
+real	0m1.172s
+/home/alan/IdeaProjects/cdkl/pj1-tests/sat/sat12.cnf
+s SATISFIABLE
+real	0m1.604s
+/home/alan/IdeaProjects/cdkl/pj1-tests/sat/sqrt10201.cnf
+s SATISFIABLE
+real	0m2.630s
+/home/alan/IdeaProjects/cdkl/pj1-tests/sat/sqrt1042441.cnf
+s SATISFIABLE
+real	0m3.070s
+/home/alan/IdeaProjects/cdkl/pj1-tests/sat/sqrt10609.cnf
+s SATISFIABLE
+real	0m2.852s
+/home/alan/IdeaProjects/cdkl/pj1-tests/sat/sqrt11449.cnf
+s SATISFIABLE
+real	0m2.964s
+/home/alan/IdeaProjects/cdkl/pj1-tests/sat/uf20-01000.cnf
+s SATISFIABLE
+real	0m2.198s
+/home/alan/IdeaProjects/cdkl/pj1-tests/sat/uf20-0100.cnf
+s SATISFIABLE
+real	0m1.864s
+/home/alan/IdeaProjects/cdkl/pj1-tests/sat/uf20-0101.cnf
+s SATISFIABLE
+real	0m1.828s
+/home/alan/IdeaProjects/cdkl/pj1-tests/sat/uf20-0102.cnf
+s SATISFIABLE
+real	0m1.727s
+/home/alan/IdeaProjects/cdkl/pj1-tests/sat/uf20-0103.cnf
+s SATISFIABLE
+real	0m1.838s
+/home/alan/IdeaProjects/cdkl/pj1-tests/sat/uf20-0104.cnf
+s SATISFIABLE
+real	0m1.960s
+/home/alan/IdeaProjects/cdkl/pj1-tests/sat/uf20-0105.cnf
+s SATISFIABLE
+real	0m1.942s
+/home/alan/IdeaProjects/cdkl/pj1-tests/sat/uf20-0106.cnf
+s SATISFIABLE
+real	0m2.676s

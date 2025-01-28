@@ -10,6 +10,7 @@ private data class Node(val literal: Literal, val type: NodeType, val decisionLe
 
 class ImplicationGraph(private val strategy: ConflictStrategy) {
   private val implicationGraph = mutableMapOf<Node, MutableList<Node>>()
+  override fun toString(): String = implicationGraph.toString()
 
   fun addDecision(literal: Literal, level: Int) {
     if (safeMode) ensureVariableNotInGraph(literal)
